@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#32CD32">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="#32CD32"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+>
+    <EditText
+        android:id="@+id/user"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint="@string/name"
+        android:layout_marginTop="40dp"
+
+        />
+
+
+    <EditText
+        android:id="@+id/pasword"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:hint="@string/pass"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#193045"
+        android:text="@string/iniciar"
+        android:layout_marginTop="3pt"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#193045"
+        android:text="@string/re"
+        android:layout_marginTop="3pt"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="OR"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/face" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/gmail" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/twiter" />
+
+
+</LinearLayout>
+</ScrollView>

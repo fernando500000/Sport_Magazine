@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sport Magazine</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="noticias">Noticias</string>
+    <string name="tienda">Tienda</string>
+    <string name="vender">Vender</string>
+    <string name="lugares">Gimnasios</string>
+    <string name="re">Registro</string>
+    <string name="name">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="nombre">nombre</string>
+    <string name="apellido">apellido</string>
+    <string name="correo">correo</string>
+    <string name="contraseña">contraseña</string>
+    <string name="Registrar">Registrar</string>
+
+
+
+</resources>

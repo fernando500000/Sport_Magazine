@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sport Magazine</string>
+    <string name="siguiente">Next</string>
+    <string name="noticias">News</string>
+    <string name="tienda">Shop</string>
+    <string name="vender">Sell</string>
+    <string name="lugares">Gyms</string>
+    <string name="iniciar">Login</string>
+    <string name="re">Register</string>
+    <string name="name">User</string>
+    <string name="pass">Password</string>
+    <string name="nombre">name</string>
+    <string name="apellido">last name</string>
+    <string name="correo">Email</string>
+    <string name="contraseña">password</string>
+    <string name="Registrar">Register</string>
+</resources>
