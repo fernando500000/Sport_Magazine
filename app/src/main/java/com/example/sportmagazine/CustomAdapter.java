@@ -9,13 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
 
     Context context;
-    ArrayList<Noticia> arr;
+    List<Noticia> arr;
 
-    public CustomAdapter(Context context, ArrayList<Noticia> arr) {
+    public CustomAdapter(Context context, List<Noticia> arr) {
         this.context = context;
         this.arr = arr;
     }

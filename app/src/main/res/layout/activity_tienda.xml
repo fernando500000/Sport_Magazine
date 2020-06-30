@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="#193045">
 
     <ImageView
         android:id="@+id/portada"

@@ -15,4 +15,5 @@
     <string name="correo">Email</string>
     <string name="contraseña">password</string>
     <string name="Registrar">Register</string>
+    <string name="agregar">Add News</string>
 </resources>

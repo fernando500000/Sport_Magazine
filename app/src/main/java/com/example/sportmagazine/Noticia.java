@@ -5,17 +5,18 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity(tableName ="noticia")
 public class Noticia {
-@PrimaryKey
-        @ColumnInfo (name= "titulo")
+    @PrimaryKey
+    @ColumnInfo (name= "id")
+    int id;
+    @ColumnInfo (name= "titulo")
     String titulo;
     @ColumnInfo (name= "portada")
     int portada;
     @ColumnInfo (name= "texto")
     String texto;
-    @ColumnInfo (name= "id")
-    int id;
 
-    public Noticia(String titulo, int portada, String texto, int id) {
+
+    public Noticia(int id, String titulo, int portada, String texto ) {
         this.titulo = titulo;
         this.portada = portada;
         this.texto = texto;
