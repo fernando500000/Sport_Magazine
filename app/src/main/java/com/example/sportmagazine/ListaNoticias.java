@@ -28,10 +28,22 @@ public class ListaNoticias extends AppCompatActivity {
         add = (Button)findViewById(R.id.add);
         noticiaRepository.getAll().observe(this, new Observer<List<Noticia>>() {
             @Override
-            public void onChanged(List<Noticia> noticias) {
+            public void onChanged(final List<Noticia> noticias) {
                 list = findViewById(R.id.lista);
                 CustomAdapter arrayAdapter=new CustomAdapter(getApplicationContext(),noticias);
                 list.setAdapter(arrayAdapter);
+
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        Intent activity2Intent = new Intent(getApplicationContext(), MostrarNoticia.class);
+                        activity2Intent.putExtra("ID_EXTRA1", noticias.get(i).getPortada());
+                        activity2Intent.putExtra("ID_EXTRA2", noticias.get(i).getTitulo());
+                        activity2Intent .putExtra("ID_EXTRA3", noticias.get(i).getTexto());
+                        startActivity(activity2Intent);
+                    }
+                });
             }
         });
 
