@@ -1,15 +1,25 @@
 package com.example.sportmagazine;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity(tableName ="noticia")
 public class Noticia {
-
+@PrimaryKey
+        @ColumnInfo (name= "titulo")
     String titulo;
+    @ColumnInfo (name= "portada")
     int portada;
+    @ColumnInfo (name= "texto")
     String texto;
+    @ColumnInfo (name= "id")
+    int id;
 
-    public Noticia(String titulo, int portada, String texto) {
+    public Noticia(String titulo, int portada, String texto, int id) {
         this.titulo = titulo;
         this.portada = portada;
         this.texto = texto;
+        this.id = id;
     }
 
     public String getTitulo() {
@@ -36,7 +46,11 @@ public class Noticia {
         this.texto = texto;
     }
 
+    public int getId() {
+        return id;
+    }
 
-
-
+    public void setId(int id) {
+        this.id = id;
+    }
 }
