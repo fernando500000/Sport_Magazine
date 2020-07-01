@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity(tableName ="noticia")
 public class Noticia {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo (name= "id")
     int id;
     @ColumnInfo (name= "titulo")
@@ -16,11 +16,11 @@ public class Noticia {
     String texto;
 
 
-    public Noticia(int id, String titulo, int portada, String texto ) {
+    public Noticia( String titulo, int portada, String texto ) {
         this.titulo = titulo;
         this.portada = portada;
         this.texto = texto;
-        this.id = id;
+
     }
 
     public String getTitulo() {
