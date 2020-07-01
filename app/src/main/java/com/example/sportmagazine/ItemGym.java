@@ -37,4 +37,8 @@ public class ItemGym extends AppCompatActivity {
         p2.setText(plan2);
         p3.setText(plan3);
 
-    }}
+    }
+
+    public void shareLocation(View view) {
+    }
+}

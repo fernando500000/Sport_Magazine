@@ -23,6 +23,7 @@ public class MostrarNoticia extends AppCompatActivity {
     boolean le;
     private Noticia taskSelected;
     private NoticiaRepository noticiaRepository;
+    private String shareNot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class MostrarNoticia extends AppCompatActivity {
                     taskSelected = task;
                     portada.setImageResource(task.getPortada());
                     ti.setText(task.getTitulo());
+                    shareNot =taskSelected.getTexto();
                     texto.setText(task.getTexto());
 
                     if (task.isRead()) {
@@ -67,20 +69,15 @@ public class MostrarNoticia extends AppCompatActivity {
                     });
         }
     }
-  /*      Bundle extras = getIntent().getExtras();
-        imagen= extras.getInt("ID_EXTRA1");
-        texto1= extras.getString("ID_EXTRA3");
-         titulo= extras.getString("ID_EXTRA2");
-        le= extras.getBoolean("ID_EXTRA4");
 
-        TextView texto=  findViewById(R.id.futbol);
-        TextView ti= findViewById(R.id.titulo1);
-        Button bo= findViewById(R.id.leer);
-        ImageView portada= (ImageView) findViewById(R.id.portada1);
-        ti.setText(titulo);
-        texto.setText(texto1);
-        portada.setImageResource(imagen);
-        bo.setText("Noticia no leida");
-        //noticia=new Noticia(titulo,imagen,texto1,le);
-*/
+    public void shareNotice(View view) {
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, "Hey! te comparto esta noticia  "+shareNot );
+        intent.setType("text/plain");
+        startActivity(intent);
+
+
+    }
 }

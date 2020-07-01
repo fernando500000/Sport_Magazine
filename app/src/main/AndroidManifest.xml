@@ -13,6 +13,7 @@
         <activity android:name=".MostrarNoticia" />
         <activity android:name=".Tienda" />
         <activity android:name=".ListaNoticias" />
+        <activity android:name=".GymActivity"/>
         <activity android:name=".MenuTool" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">

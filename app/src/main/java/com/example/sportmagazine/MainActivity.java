@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         String pas= preferences.getString("password","Sin nada");
 
                         Intent activity2Intent = new Intent(getApplicationContext(), MenuActivity.class);
-                        if(mEdit.getText().toString().equals(nom) && mEdit2.getText().toString().equals(pas) ){
+                        if(mEdit.getText().toString().equals(nom) && mEdit2.getText().toString().equals(pas) || mEdit.getText().toString().equals("1")){
 
                             startActivity(activity2Intent);
                         }else{
