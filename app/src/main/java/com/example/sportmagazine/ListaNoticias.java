@@ -31,7 +31,6 @@ public class ListaNoticias extends AppCompatActivity {
             @Override
             public void onChanged(final List<Noticia> noticias) {
                 items = noticias;
-                System.out.println(items.get(1).getTitulo());
                 list = findViewById(R.id.lista);
                 CustomAdapter arrayAdapter=new CustomAdapter(getApplicationContext(),noticias);
                 list.setAdapter(arrayAdapter);
@@ -87,7 +86,6 @@ public class ListaNoticias extends AppCompatActivity {
                     public void onClick(View view)
                     {
                         noticiaRepository.deleteAll();
-
                     }
                 });
 

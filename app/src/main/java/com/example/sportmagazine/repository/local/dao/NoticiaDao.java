@@ -17,7 +17,7 @@ public interface NoticiaDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     long insert(Noticia noticia);
-    @Query("DELETE FROM noticia ")
+    @Query("DELETE FROM noticia")
     void deleteleAll();
     @Query("SELECT * FROM noticia where read=:leido ORDER BY id ASC")
     LiveData<List<Noticia>> getAll(boolean leido);
