@@ -37,6 +37,20 @@ public class NoticiaRepository {
     }
 
     public LiveData<List<Noticia>> getAll() {
-        return db.noticiaDao().getAll();
+        return db.noticiaDao().getAll(false);
+    }
+
+
+    public void updateEntry(final Noticia task) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                db.noticiaDao().updateEntry(task);
+            }
+        });
+        thread.start();
+    }
+    public LiveData<Noticia> getById(long id) {
+        return db.noticiaDao().getById(id);
     }
 }

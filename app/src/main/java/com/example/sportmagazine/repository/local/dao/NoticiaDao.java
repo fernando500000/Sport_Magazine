@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.sportmagazine.Noticia;
 
@@ -18,7 +19,11 @@ public interface NoticiaDao {
     long insert(Noticia noticia);
     @Query("DELETE FROM noticia ")
     void deleteleAll();
-    @Query("SELECT * FROM noticia ORDER BY id ASC")
-    LiveData<List<Noticia>> getAll();
+    @Query("SELECT * FROM noticia where read=:leido ORDER BY id ASC")
+    LiveData<List<Noticia>> getAll(boolean leido);
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    void updateEntry(Noticia task);
+    @Query("SELECT * FROM noticia WHERE id=:id")
+    LiveData<Noticia> getById(long id);
 }
 

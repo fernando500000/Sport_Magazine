@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.example.sportmagazine.Noticia;
 import com.example.sportmagazine.repository.local.dao.NoticiaDao;
 
-@Database(entities = Noticia.class, version = 2)
+@Database(entities = Noticia.class, version = 3)
 public abstract class NoticiaDb extends RoomDatabase {
     public abstract NoticiaDao noticiaDao();
 
@@ -21,7 +21,7 @@ public abstract class NoticiaDb extends RoomDatabase {
             synchronized (NoticiaDb.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            NoticiaDb.class, "noticia_database2")
+                            NoticiaDb.class, "noticia_database3")
                             .build();
                 }
             }

@@ -14,13 +14,24 @@ public class Noticia {
     int portada;
     @ColumnInfo (name= "texto")
     String texto;
+    @ColumnInfo (name= "read")
+     boolean read ;
 
 
-    public Noticia( String titulo, int portada, String texto ) {
+
+    public Noticia( String titulo, int portada, String texto , boolean read ) {
         this.titulo = titulo;
         this.portada = portada;
         this.texto = texto;
+        this.read=read;
+    }
 
+    public boolean isRead() {
+        return read;
+    }
+
+    public void setRead(boolean read) {
+        this.read = read;
     }
 
     public String getTitulo() {
